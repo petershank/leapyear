@@ -11,9 +11,7 @@ function isCenturyException(k) {
 }
 
 function isLeapYear(n) {
-  return isCenturyException(n);
+  return isDivisibleBy(n, 4) && !isCenturyException(n);
 }
-
-// console.log(isDivisibleBy(2400, 100) && !isDivisibleBy(2400, 400));
 
 module.exports = isLeapYear;
